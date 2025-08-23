@@ -1,2 +1,2 @@
-100 days of code \n
+100 days of code\n
 c programming
