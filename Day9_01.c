@@ -20,7 +20,7 @@ Roots are complex
 
 #include <stdio.h>
 #include <math.h>
-void main()
+int main()
 {
     float a ,b,c,d=0,r1=0,r2=0;
     printf(" Enter quadratic equation \n");
@@ -39,4 +39,5 @@ void main()
     }
     else if (d<0)
     printf("Roots are complex");
+    return 0;
 }
