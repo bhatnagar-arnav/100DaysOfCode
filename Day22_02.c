@@ -23,7 +23,7 @@ int main() {
     {
        sum = sum +((2.0*i-1)/(2*i));
     }
-    printf("Approximate sum : %f",sum);
+    printf("Approximate sum : %.1f",sum);
     return 0;
 }
 
