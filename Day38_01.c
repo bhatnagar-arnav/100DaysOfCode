@@ -39,7 +39,7 @@ int main() {
      {
         for(int j=0;j<b;j++)
         {
-            scanf("%d", &arr2[a][b]);
+            scanf("%d", &arr2[i][j]);
         }
         printf("\n");
      }
@@ -55,8 +55,9 @@ int main() {
     {
         for(int j=0;j<b;j++)
         {
-            printf("%d",sum_arr[i][j]);
+            printf("%d  ",sum_arr[i][j]);
         }
+        printf("\n");
     }
   
     return 0;
