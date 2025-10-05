@@ -15,7 +15,7 @@ int main() {
     char str[100];
     printf("Enter a lowercase string: ");
     scanf("%s",str);
-    for (int i = 0; i< str[i] != '\0'; i++) {
+    for (int i = 0; i<str[i] != '\0'; i++) {
 
         if (str[i] >= 'a' && str[i] <= 'z') {
             str[i] = str[i] - 32;
