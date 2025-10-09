@@ -22,20 +22,18 @@ int main()
  {
     char original_str[100];
     char reversed_str[100];
-    int length, i, j;
+    int length, j;
     printf("Enter a string: ");
     scanf("%s", original_str);
     strcpy(reversed_str, original_str);
     length = strlen(reversed_str);
-    i = 0;
     j = length - 1;
     char temp;
-    while (i < j)
+    for(int i=0;i<j;i++)
      {
         temp = reversed_str[i];
         reversed_str[i] = reversed_str[j];
         reversed_str[j] = temp;
-        i++;
         j--;
     }
     if (strcmp(original_str, reversed_str) == 0) {
