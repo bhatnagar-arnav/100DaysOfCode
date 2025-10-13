@@ -11,18 +11,28 @@ J.D.
 
 #include <stdio.h>
 #include <string.h>
-int main() {
-    char str[100];
-    printf("Enter a string : \n");
-    fgets(str,sizeof(str),stdin);
-    int length = strlen(str);
-    printf("%c",str[0]);
-    for(int i=0;i<length;i++)
-    {
-      if(str[i]==' ')
-      printf("%c",str[i]);
+#include <ctype.h>
 
+int main() {
+    char name[100];
+    
+    if (fgets(name, sizeof(name), stdin) == NULL) return 1;
+    
+    name[strcspn(name, "\n")] = 0; 
+    
+    for (int i = 0; name[i] != '\0'; i++) {
+        if (name[i] != ' ') {
+            printf("%c.", toupper(name[i]));
+            break; 
+        }
     }
 
+    for (int i = 0; name[i] != '\0'; i++) {
+        if (name[i] == ' ' && name[i + 1] != ' ' && name[i + 1] != '\0') {
+            printf("%c.", toupper(name[i + 1]));
+        }
+    }
+
+    printf("\n");
     return 0;
 }
