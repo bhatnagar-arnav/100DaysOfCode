@@ -20,7 +20,7 @@ int main() {
     scanf("%d %d", &a,&b);
 
     int arr[a][b]; 
-    printf("Enter  elements : \n");
+    printf("Enter  elements : \n");  
     
     for (int i = 0; i < a; i++)
      {
