@@ -23,3 +23,35 @@ Output 4:
 2
 
 */
+
+#include <stdio.h>
+
+int main() {
+    int x , n,flag=0;
+    printf("Enter a number: \n");
+    scanf("%d",&x);
+    printf("Enter number of elements in array\n");
+    scanf("%d",&n);
+    int arr[n];
+    printf("Enter %d elements : \n",n);
+    for(int i=0;i<n;i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+    for(int i=0;i<n;i++)
+    {
+        if(arr[i]>=x)
+        {
+        printf("Index of ciel :%d",i);
+        flag++;
+        break;
+    }
+   
+}
+if(flag==0)
+{
+    printf("-1");
+}
+
+    return 0;
+}
