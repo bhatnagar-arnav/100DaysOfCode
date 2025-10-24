@@ -18,3 +18,36 @@ Output 3:
 0
 
 */
+
+#include <stdio.h>
+
+int main() {
+    int n, total_sum = 0, left_sum = 0;
+    int pivot_index = -1;
+
+    printf("Enter the number of elements: ");
+    scanf("%d", &n);
+
+    int nums[n];
+    printf("Enter the elements:\n");
+    for (int i = 0; i < n; i++)
+     {
+        scanf("%d", &nums[i]);
+        total_sum += nums[i]; 
+        
+    }
+    for (int i = 0; i < n; i++) 
+    {
+        int right_sum = total_sum - left_sum - nums[i];
+        if (left_sum == right_sum) 
+        {
+            pivot_index = i; 
+            break;
+        }
+        left_sum += nums[i];
+    }
+
+    printf("Output:\n%d\n", pivot_index);
+
+    return 0;
+}

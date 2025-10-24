@@ -18,3 +18,56 @@ Output 3:
 -1
 
 */
+
+
+#include <stdio.h>
+
+int main() {
+    int n;
+
+    printf("Enter the number of elements (n): ");
+    if (scanf("%d", &n) != 1 || n <= 0) return 1;
+
+    int nums[n];
+    printf("Enter the elements:\n");
+    for (int i = 0; i < n; i++)
+     {
+        if (scanf("%d", &nums[i]) != 1) return 1;
+    }
+    int candidate = 0;
+    int count = 0;
+
+    for (int i = 0; i < n; i++)
+     {
+        if (count == 0) {
+            candidate = nums[i];
+            count = 1;
+        } 
+        else if (nums[i] == candidate)
+         {
+            count++;
+        }
+         else 
+        {
+            count--;
+        }
+    }
+    int frequency = 0;
+    int required_frequency = n / 2;
+
+    for (int i = 0; i < n; i++) 
+    {
+        if (nums[i] == candidate) {
+            frequency++;
+        }
+    }
+    printf("Output:\n");
+    if (frequency > required_frequency) 
+    {
+        printf("%d\n", candidate);
+    } else {
+        printf("-1\n");
+    }
+
+    return 0;
+}
