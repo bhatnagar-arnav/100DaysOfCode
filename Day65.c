@@ -24,7 +24,7 @@ bool are_anagrams(char *s, char *t) {
     if (len_s != len_t) {
         return false;
     }
-    int count[26] = {0}; 
+   int count[26] = {0}; 
     for (int i = 0; i < len_s; i++) 
     {
         count[s[i] - 'a']++;
@@ -47,13 +47,13 @@ int main() {
     char s[100], t[100];
 
     printf("Enter string s: ");
-    if (scanf("%s", s) != 1) return 1;
+    scanf("%s", s);
 
-    printf("Enter string t: ");
-    if (scanf("%s", t) != 1) return 1;
+    printf(" Enter string t: ");
+    scanf("%s", t);
 
     printf("Output:\n");
-    if (are_anagrams(s, t)) {
+    if (are_anagrams(s, t))  {
         printf("Anagram\n");
     } else {
         printf("Not Anagram\n");
