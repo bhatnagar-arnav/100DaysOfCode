@@ -38,7 +38,7 @@ int main()
         printf("Loss %.0f%%",loss_per);
     }
     else
-    printf("Np profit No loss");
+    printf("No profit No loss");
     return 0;
     
 }
