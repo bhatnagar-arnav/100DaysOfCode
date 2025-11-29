@@ -43,6 +43,5 @@ int main()
     } else {
         printf("Not palindrome\n");
     }
-
     return 0;
 }
